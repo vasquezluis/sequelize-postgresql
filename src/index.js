@@ -2,8 +2,8 @@ import app from "./app.js";
 import { sequelize } from "./database/database.js";
 
 // importar los modelos para que los reconozca la conexion a la base de datos
-import './models/Project.js'
-import './models/Task.js'
+// import './models/Project.js'
+// import './models/Task.js'
 
 async function main() {
   try {
@@ -11,7 +11,7 @@ async function main() {
 
     // sincronizacion con la base de datos
     // force: true para volver a crear la tabla al inicio del programa
-    await sequelize.sync({force: true})
+    await sequelize.sync({force: false})
 
     console.log("conexion establecida");
 
